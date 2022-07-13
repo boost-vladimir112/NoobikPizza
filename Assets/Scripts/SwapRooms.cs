@@ -31,7 +31,7 @@ public class SwapRooms : MonoBehaviour
             transform.position = new Vector3(Mathf.Clamp(transform.position.x - _pos,-5.77f, 5.59f), transform.position.y, transform.position.z);
             
         }
-        if(_cam.transform.position.x < 5.59f)
+        if(_cam.transform.position.x < 5f)
         {
             Kitchen.SetActive(true);
             ClientRoom.SetActive(false);

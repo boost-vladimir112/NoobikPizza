@@ -1133,8 +1133,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0426f09b7ae82e44cb47ebeaba88c33f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kitchen: {fileID: 1697559641}
-  ClientRoom: {fileID: 268215988}
+  _kitchen: {fileID: 1697559641}
+  _clientRoom: {fileID: 268215988}
+  _mouseController: {fileID: 567245437}
 --- !u!1 &557715038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,6 +1230,8 @@ GameObject:
   m_Component:
   - component: {fileID: 567245435}
   - component: {fileID: 567245434}
+  - component: {fileID: 567245436}
+  - component: {fileID: 567245437}
   m_Layer: 0
   m_Name: Knife
   m_TagString: Untagged
@@ -1276,7 +1279,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 02eb659e9d99e6e4db4302fc13f53df1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1303,6 +1306,47 @@ Transform:
   m_Father: {fileID: 1697559644}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &567245436
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567245433}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.31, y: 16.15}
+    newSize: {x: 7.31, y: 16.15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.31, y: 16.15}
+  m_EdgeRadius: 0
+--- !u!114 &567245437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567245433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a998bc29892684b9ba49580040a8ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 10
+  startpos: {x: 18.325, y: -22.7, z: 0}
+  _isGameObjectChoose: 0
 --- !u!1 &620944192
 GameObject:
   m_ObjectHideFlags: 0
@@ -3076,7 +3120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1697559643
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -6,7 +6,8 @@ public class MouseController : MonoBehaviour
 {
     public float distance = 10f;
     public Vector3 startpos;
-    private bool _isGameObjectChoose;
+    [SerializeField] private bool  _isGameObjectChoose;
+    
 
     public bool IsGameObjectChoose { get => _isGameObjectChoose; set => _isGameObjectChoose = value; }
 

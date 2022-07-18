@@ -6,23 +6,22 @@ public class SwapRooms : MonoBehaviour
 {
     [SerializeField] GameObject _kitchen;
     [SerializeField] GameObject _clientRoom;
-
-    [SerializeField]MouseController _mouseController;
     private Vector2 _startPos;
     private Camera _cam;
 
-    private bool _isGameObjectedChoosen;
+     private bool _isGameObjectedChoosen;
+     [SerializeField]  private List<MouseController> _selectedChoosen;
+     private int _index;
 
     void Start()
     {
-        
          _cam = GetComponent<Camera>();
         //_cam.transform.position = new Vector3(5.59f, 0, -10) ;
         
     }
     private void Update()
     {
-        _isGameObjectedChoosen = _mouseController.IsGameObjectChoose;
+        _isGameObjectedChoosen = _selectedChoosen[_index].IsGameObjectChoose;
 
         if (Input.GetMouseButtonDown(0))
         {
